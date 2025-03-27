@@ -18,17 +18,20 @@ export const Footer = () => {
             <Link to="/about" className="text-white/80 hover:text-white transition-colors">
               О нас
             </Link>
+            <Link to="/collections" className="text-white/80 hover:text-white transition-colors">
+              Коллекции
+            </Link>
           </div>
           
           <div>
             <div className="flex space-x-4 justify-center md:justify-end">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
@@ -36,7 +39,7 @@ export const Footer = () => {
         </div>
         
         <div className="mt-8 pt-6 border-t border-white/10 text-center text-white/60 text-sm">
-          <p>&copy; 2024 LUXMEN. Все права защищены.</p>
+          <p>&copy; {new Date().getFullYear()} LUXMEN. Все права защищены.</p>
         </div>
       </div>
     </footer>
