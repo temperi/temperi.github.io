@@ -15,30 +15,35 @@ import Admin from "./pages/Admin";
 import Collections from "./pages/Collections";
 import ResetPassword from "./pages/ResetPassword";
 
+// Создаем клиент для React Query
 const queryClient = new QueryClient();
 
-// Всегда используем HashRouter для обеспечения совместимости с GitHub Pages
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/category/:type" element={<Category />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/collections" element={<Collections />} />
-          <Route path="/reset-password" element={<ResetPassword />} />
-        </Routes>
-      </HashRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+// Используем HashRouter для совместимости с GitHub Pages
+const App = () => {
+  console.log("Рендеринг главного компонента App");
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/category/:type" element={<Category />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/collections" element={<Collections />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
+          </Routes>
+        </HashRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
