@@ -6,6 +6,7 @@ import './index.css'
 
 // Функция для инициализации приложения
 function initializeApp() {
+  console.log("Начало инициализации приложения");
   const rootElement = document.getElementById('root');
   if (!rootElement) {
     console.error("Не найден элемент с id 'root'");

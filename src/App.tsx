@@ -14,6 +14,7 @@ import Cart from "./pages/Cart";
 import Admin from "./pages/Admin";
 import Collections from "./pages/Collections";
 import ResetPassword from "./pages/ResetPassword";
+import Reviews from "./pages/Reviews";
 
 // Создаем клиент для React Query
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/admin" element={<Admin />} />
             <Route path="/collections" element={<Collections />} />
             <Route path="/reset-password" element={<ResetPassword />} />
+            <Route path="/reviews" element={<Reviews />} />
           </Routes>
         </HashRouter>
       </TooltipProvider>
